@@ -12,5 +12,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
+    - name: Update Bundles
+      run: bundle install
     - name: Run Unit Tests
       run: bundle exec fastlane custom_lane 
