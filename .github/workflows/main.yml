@@ -1,4 +1,4 @@
-name: Deploy
+name: Test
 
 on:
   # Trigger the workflow on push
@@ -12,5 +12,5 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-    - name: Dump file hierarchy
-      run: ls -R
+    - name: Run Unit Tests
+      run: bundle exec fastlane custom_lane 
